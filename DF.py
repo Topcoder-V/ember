@@ -2,9 +2,6 @@
 import matplotlib.pyplot as plt
 import math
 
-from SakuraTree import max_level
-
-
 # 生长（在t的末端产生角度为d的分枝）
 def grow(t, d):
     pass
