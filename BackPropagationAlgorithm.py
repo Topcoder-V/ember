@@ -4,7 +4,6 @@ import math
 import numpy as np
 
 
-
 # 下标0均不用
 # 输入层
 X = [[0, 0, 0],
@@ -48,19 +47,14 @@ y = a3 = [0, 1, 1]
 e3 = [0, 1, 1]
 
 # Sigmoid函数及其导数
+def sigmoid(x):
+    return 1 / (1 + np.exp(-x))
+
 # def sigmoid(x):
 #     return 1 / (1 + math.exp(-x))
 
 def d_sigmoid(x):
     return x * (1 - x)
-
-
-def sigmoid(x):
-    return 1 / (1 + np.exp(-x))
-
-# def d_sigmoid(x):
-#     s = sigmoid(x)
-#     return s * (1 - s)
 
 # 学习率
 yita = 0.4
@@ -110,7 +104,8 @@ for p in range(epochs):
         e1[1] = e2[1] * d_sigmoid(a2[1])*w2[1][1] + e2[2] * d_sigmoid(a2[2])*w2[1][2]
         e1[2] = e2[1] * d_sigmoid(a2[1])*w2[2][1] + e2[2] * d_sigmoid(a2[2])*w2[2][2]
 
-        # 更新权重
+        # 更新权重 梯度下降
+        # 更新权重 梯度下降
         for i in range(1, 3):
             for j in range(1, 3):
                 w1[i][j] -= yita * (e1[j]*d_sigmoid(a1[j])*a0[i]) # 𝜕C / 𝜕w1_i_j
