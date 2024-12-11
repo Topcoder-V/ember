@@ -7,4 +7,17 @@ import numpy as np
 from numpy import random, dot, exp
 
 # 输入层
+x = np.array([[0, 0, 1, 1], [0, 1, 0, 1]])
+
+# 输出层(标签)
+y_ = np.array([[0, 1, 1, 0], [0, 1, 1, 0]])
+
+# 随机初始化参数
+W1 = np.array([[1, 2],
+               [3, 4.0]])
+W2 = np.array([[1, 2],
+               [3, 4.0]])
+W3 = np.array([[1, 2],
+               [1, 2],
+               [3, 4.0]])
 
