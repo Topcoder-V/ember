@@ -67,5 +67,24 @@ for i in range(epochs):
     W2 -= yita*dL_W2
     W1 -= yita*dL_W1
 
+# 计算XOR
+c = input("计算XOR吗(y/n)?\n")
+while c == 'y':
+    x0 = float(input("输入第一个数据："))
+    x1 = float(input("输入第二个数据："))
+    x = np.array([x0, x1])
+
+    # 正向计算
+    z1 = dot(W1, x)
+    a1 = sigmoid(z1)
+    z2 = dot(W2, a1)
+    a2 = sigmoid(z2)
+    z3 = dot(W3, a2)
+    y = a3 = sigmoid(z3)
+
+    print("模型输出：", y)
+
+    c = input("计算XOR吗(y/n)?\n")
+
 
 
