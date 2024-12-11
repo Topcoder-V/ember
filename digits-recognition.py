@@ -1,4 +1,5 @@
 # 数字识别
+# 用sklearn的digits数据集训练MLP
 
 # https://blog.csdn.net/wlddhj/article/details/139124584
 # from sklearn.datasets import load_digits
