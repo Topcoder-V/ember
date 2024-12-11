@@ -18,6 +18,11 @@ X_train, X_test, y_train, y_test = train_test_split(digits.data, digits.target, 
 
 # 创建MLP分类器
 mlp = MLPClassifier(hidden_layer_sizes=(100, 100), max_iter=1000, random_state=42)
+"""
+hidden_layer_sizes=(100, 100): 这意味着您的网络有两个隐藏层，每个隐藏层有100个神经元。
+max_iter=1000: 这是指定网络训练的最大迭代次数。在达到最大迭代次数之前，如果网络已经收敛（即，网络性能不再显著提高），训练过程可能会提前停止。
+random_state=42: 这是设置一个随机数生成器的种子，以确保每次运行代码时都能得到相同的结果。这对于调试和结果的可复现性是很有帮助的。
+"""
 
 # 训练模型
 mlp.fit(X_train, y_train)
